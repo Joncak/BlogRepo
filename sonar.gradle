@@ -1,0 +1,26 @@
+apply plugin: 'org.sonarqube'
+/*apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = '0.7.4.201502262128'
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
+*/
+
+
+sonarqube {
+    properties {
+        property "sonar.interviews", "BlogRepo"
+        property "sonar.projectKey", "org.sonarqube:blog-repo"
+        property "sonar.host.url", "http://sonar"
+        property "sonar.jdbc.url", "jdbc:postgresql://postgres:5432/sonar"
+        property "sonar.jdbc.driverClassName", "org.postgresql.Drive"
+        property "sonar.jdbc.username", "sonar"
+        property "sonar.jdbc.password", "sonar"
+    }
+}
