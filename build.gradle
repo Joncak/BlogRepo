@@ -15,7 +15,7 @@
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.6.RELEASE")
-        classpath group: 'org.sonarqube.gradle', name: 'gradle-sonarqube-plugin', version: '1.0'
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.5"
     }
 }
 
@@ -23,6 +23,7 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'spring-boot'
+apply plugin: 'org.sonarqube'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
