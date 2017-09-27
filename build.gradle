@@ -55,11 +55,8 @@ sonarqube {
     properties {
         property "sonar.interviews", "BlogRepo"
         property "sonar.projectKey", "org.sonarqube:blog-repo"
-        property "sonar.host.url", "http://sonar"
-        property "sonar.jdbc.url", "jdbc:postgresql://postgres:5432/sonar"
+        property "sonar.host.url", "http://sonar:8080"
         property "sonar.jdbc.driverClassName", "org.postgresql.Drive"
-        property "sonar.jdbc.username", "sonar"
-        property "sonar.jdbc.password", "sonar"
     }
 }
 
