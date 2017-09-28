@@ -14,7 +14,7 @@
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.6.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.0.RELEASE")
         classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.5"
     }
 }
@@ -22,7 +22,7 @@
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
 apply plugin: 'org.sonarqube'
 
 // In this section you declare where to find the dependencies of your project
@@ -55,13 +55,13 @@ sonarqube {
     properties {
         property "sonar.interviews", "BlogRepo"
         property "sonar.projectKey", "org.sonarqube:blog-repo"
-        property "sonar.host.url", "http://sonar:8080"
+        property "sonar.host.url", "http://sonar"
         property "sonar.jdbc.driverClassName", "org.postgresql.Drive"
     }
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.3'
+    gradleVersion = '3.5'
 }
  
 jar {
