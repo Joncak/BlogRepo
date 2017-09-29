@@ -54,6 +54,6 @@ task wrapper(type: Wrapper) {
 }
  
 jar {
-    baseName = 'blog-rest-service'
+    baseName = 'blog'
     version =  '0.1.0'
 }
